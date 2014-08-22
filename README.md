@@ -9,4 +9,4 @@ This repository contains Dockerfile of H2.
 
 ### Usage
 
-    docker run -d -p 1521:1521 -p 81:81 zilvinasu/h2-dockerfile
+    docker run -d -p 1521:1521 -p 81:81 zilvinas/h2-dockerfile
