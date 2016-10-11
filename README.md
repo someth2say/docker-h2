@@ -15,9 +15,9 @@ Dockerized H2 database service.
 
 [Automated builds](https://hub.docker.com/r/oscarfonts/h2/) on [docker registry](https://registry.hub.docker.com/):
 
-* Latest ([Dockerfile](https://github.com/oscarfonts/docker-h2/blob/master/Dockerfile))
-* 1.1.119 ([Dockerfile](https://github.com/oscarfonts/docker-h2/blob/1.1.119/Dockerfile))
-* geodb ([Dockerfile](https://github.com/oscarfonts/docker-h2/blob/geodb/Dockerfile))
+* [`latest`, `1.3.176` (*1.3.176/Dockerfile*)](https://github.com/oscarfonts/docker-h2/blob/master/1.3.176/Dockerfile)
+* [`1.1.119` (*1.1.119/Dockerfile*)](https://github.com/oscarfonts/docker-h2/blob/master/1.1.119/Dockerfile)
+* [`geodb` (*geodb/Dockerfile*)](https://github.com/oscarfonts/docker-geoserver/blob/master/geodb/Dockerfile)
 
 
 ## Running
