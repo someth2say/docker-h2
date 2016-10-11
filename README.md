@@ -17,7 +17,7 @@ Dockerized H2 database service.
 
 * [`latest`, `1.3.176` (*1.3.176/Dockerfile*)](https://github.com/oscarfonts/docker-h2/blob/master/1.3.176/Dockerfile)
 * [`1.1.119` (*1.1.119/Dockerfile*)](https://github.com/oscarfonts/docker-h2/blob/master/1.1.119/Dockerfile)
-* [`geodb` (*geodb/Dockerfile*)](https://github.com/oscarfonts/docker-geoserver/blob/master/geodb/Dockerfile)
+* [`geodb` (*geodb/Dockerfile*)](https://github.com/oscarfonts/docker-h2/blob/master/geodb/Dockerfile)
 
 
 ## Running
