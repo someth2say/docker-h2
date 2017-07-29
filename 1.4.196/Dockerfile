@@ -25,6 +25,6 @@ RUN chown -R 1001:1001 ${DATA_DIR}
 USER 1001
 
 CMD java -cp /opt/h2/bin/h2*.jar org.h2.tools.Server \
- 	-web -webAllowOthers -webPort 81 \
+ 	-web -webAllowOthers -webPort 8081 \
  	-tcp -tcpAllowOthers -tcpPort 1521 \
  	-baseDir ${DATA_DIR}
