@@ -16,7 +16,15 @@ RUN curl ${DOWNLOAD} -o h2.zip \
 
 EXPOSE 81 1521
 
+RUN /usr/sbin/groupadd -g 1001 -f h2user
+RUN ["/usr/sbin/useradd", "-m", "-g 1001", "-u 1001", "h2user"]
+RUN /bin/bash -c 'echo "h2user:changeme" | /usr/sbin/chpasswd'
+
+RUN chown -R 1001:1001 ${DATA_DIR}
+
+USER 1001
+
 CMD java -cp /opt/h2/bin/h2*.jar org.h2.tools.Server \
- 	-web -webAllowOthers -webPort 81 \
+ 	-web -webAllowOthers -webPort 8081 \
  	-tcp -tcpAllowOthers -tcpPort 1521 \
  	-baseDir ${DATA_DIR}
