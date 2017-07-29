@@ -14,7 +14,7 @@ RUN curl ${DOWNLOAD} -o h2.zip \
     && rm h2.zip \
     && mkdir -p ${DATA_DIR}
 
-EXPOSE 81 1521
+EXPOSE 8081 1521
 
 RUN /usr/sbin/groupadd -g 1001 -f h2user
 RUN ["/usr/sbin/useradd", "-m", "-g 1001", "-u 1001", "h2user"]
