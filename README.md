@@ -31,7 +31,7 @@ docker pull oscarfonts/h2
 Run as a service, exposing ports 1521 (TCP database server) and 81 (web interface) and mapping DATA_DIR to host:
 
 ```
-docker run -d -p 1521:1521 -p 81:81 -v /path/to/local/data_dir:/opt/h2-data --name=MyH2Instance oscarfonts/h2
+docker run -d -p 1521:1521 -p 81:8081 -v /path/to/local/data_dir:/opt/h2-data --name=MyH2Instance oscarfonts/h2
 ```
 
 See the logs while running:
