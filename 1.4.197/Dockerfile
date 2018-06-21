@@ -1,4 +1,4 @@
-FROM java:7
+FROM openjdk:10
 
 # A merge of:
 #  https://github.com/zhilvis/docker-h2
@@ -13,6 +13,8 @@ RUN curl ${DOWNLOAD} -o h2.zip \
     && unzip h2.zip -d /opt/ \
     && rm h2.zip \
     && mkdir -p ${DATA_DIR}
+
+COPY h2.server.properties /root/.h2.server.properties
 
 EXPOSE 81 1521
 
