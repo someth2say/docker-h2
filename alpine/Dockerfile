@@ -1,4 +1,4 @@
-FROM openjdk:10
+FROM openjdk:jre-alpine
 
 # A merge of:
 #  https://github.com/zhilvis/docker-h2
@@ -6,8 +6,10 @@ FROM openjdk:10
 
 MAINTAINER Oscar Fonts <oscar.fonts@geomati.co>
 
-ENV DOWNLOAD https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/h2database/h2-2009-09-26.zip
+ENV DOWNLOAD http://www.h2database.com/h2-2018-03-18.zip
 ENV DATA_DIR /opt/h2-data
+
+RUN apk add --no-cache curl
 
 RUN mkdir -p ${DATA_DIR} \
     && curl ${DOWNLOAD} -o h2.zip \

@@ -9,10 +9,10 @@ MAINTAINER Oscar Fonts <oscar.fonts@geomati.co>
 ENV DOWNLOAD http://www.h2database.com/h2-2018-03-18.zip
 ENV DATA_DIR /opt/h2-data
 
-RUN curl ${DOWNLOAD} -o h2.zip \
+RUN mkdir -p ${DATA_DIR} \
+    && curl ${DOWNLOAD} -o h2.zip \
     && unzip h2.zip -d /opt/ \
-    && rm h2.zip \
-    && mkdir -p ${DATA_DIR}
+    && rm h2.zip
 
 COPY h2.server.properties /root/.h2.server.properties
 
