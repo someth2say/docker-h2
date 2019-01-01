@@ -20,6 +20,8 @@ COPY h2.server.properties /root/.h2.server.properties
 
 EXPOSE 81 1521
 
+WORKDIR /opt/h2-data
+
 CMD java -cp /opt/h2/bin/h2*.jar org.h2.tools.Server \
  	-web -webAllowOthers -webPort 81 \
  	-tcp -tcpAllowOthers -tcpPort 1521 \
