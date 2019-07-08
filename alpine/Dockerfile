@@ -6,7 +6,7 @@ FROM openjdk:jre-alpine
 
 MAINTAINER Oscar Fonts <oscar.fonts@geomati.co>
 
-ENV DOWNLOAD http://www.h2database.com/h2-2018-03-18.zip
+ENV DOWNLOAD http://www.h2database.com/h2-2019-03-13.zip
 ENV DATA_DIR /opt/h2-data
 
 RUN apk add --no-cache curl
