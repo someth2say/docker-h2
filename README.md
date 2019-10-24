@@ -38,7 +38,7 @@ docker run -d -p 1521:1521 -p 81:81 -v /path/to/local/data_dir:/opt/h2-data --na
 Or run as a service with an extra custom config set in the command line, like allowing to create database at connection:
 
 ```
-docker run -d -p 1521:1521 -p 81:81 -v /path/to/local/data_dir:/opt/h2-data -e H2_OPTIONS='-ifNotExists' --name=MyH2Instance oscarfonts/h2
+docker run -d -p 1521:1521 -p 81:81 -v /path/to/local/data_dir:/opt/h2-data -e H2_OPTIONS=-ifNotExists --name=MyH2Instance oscarfonts/h2
 ```
 
 The H2 web console will be available at: http://localhost:81
